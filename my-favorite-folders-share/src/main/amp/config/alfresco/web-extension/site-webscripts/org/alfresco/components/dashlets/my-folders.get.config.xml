@@ -1,0 +1,6 @@
+<config>
+   <max-items>50</max-items>
+   <filters>
+      <filter type="favourites" />
+   </filters>
+</config>
