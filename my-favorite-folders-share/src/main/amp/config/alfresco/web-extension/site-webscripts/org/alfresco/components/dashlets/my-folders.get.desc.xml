@@ -1,5 +1,5 @@
 <webscript>
-   <shortname>My Favourite Folders</shortname>
+   <shortname>My Favorite Folders</shortname>
    <description>Dashlet to list folders associated with the current user</description>
    <family>user-dashlet</family>
    <url>/components/dashlets/my-folders</url>
