@@ -35,6 +35,7 @@
         $links = Alfresco.util.activateLinks,
         $relTime = Alfresco.util.relativeTime,
         $siteDashboard = Alfresco.util.siteDashboardLink,
+        $userProfile = Alfresco.util.userProfileLink,
         $combine = Alfresco.util.combinePaths;
 
     /**
