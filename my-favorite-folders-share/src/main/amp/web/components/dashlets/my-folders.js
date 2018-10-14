@@ -121,7 +121,13 @@
                      path = record.webdavUrl.substring(record.webdavUrl.indexOf("documentLibrary") + 15);
                   }
                   else {
-                     path = record.webdavUrl;
+                     // if this is a folder in Shared Files, strip the leading /webdav, otherwise it will not work properly
+                     if (record.webdavUrl.startsWith('/webdav/Shared')) {
+                        path = record.webdavUrl.substring(7);
+                     }
+                     else {
+                        path = record.webdavUrl;
+                     }
                   }
 
                   var name = record.fileName,
@@ -170,7 +176,13 @@
                     path = record.webdavUrl.substring(record.webdavUrl.indexOf("documentLibrary") + 15);
                  }
                  else {
-                    path = record.webdavUrl;
+                     // if this is a folder in Shared Files, strip the leading /webdav, otherwise it will not work properly
+                     if (record.webdavUrl.startsWith('/webdav/Shared')) {
+                        path = record.webdavUrl.substring(7);
+                     }
+                     else {
+                        path = record.webdavUrl;
+                     }
                  }
 
                  var id = this.id + '-metadata-' + oRecord.getId(),
