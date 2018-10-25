@@ -121,8 +121,9 @@
                      path = record.webdavUrl.substring(record.webdavUrl.indexOf("documentLibrary") + 15);
                   }
                   else {
-                     // if this is a folder in Shared Files, strip the leading /webdav, otherwise it will not work properly
-                     if (record.webdavUrl.startsWith('/webdav/Shared')) {
+                     // if this is a folder in My Files, Shared Files, or the Repository (not in a site),
+                     // strip the leading /webdav from the link, otherwise it will not work properly
+                     if (record.webdavUrl.indexOf('/webdav/') >= 0) {
                         path = record.webdavUrl.substring(7);
                      }
                      else {
@@ -176,8 +177,9 @@
                     path = record.webdavUrl.substring(record.webdavUrl.indexOf("documentLibrary") + 15);
                  }
                  else {
-                     // if this is a folder in Shared Files, strip the leading /webdav, otherwise it will not work properly
-                     if (record.webdavUrl.startsWith('/webdav/Shared')) {
+                     // if this is a folder in My Files, Shared Files, or the Repository (not in a site),
+                     // strip the leading /webdav from the link, otherwise it will not work properly
+                     if (record.webdavUrl.indexOf('/webdav/') >= 0) {
                         path = record.webdavUrl.substring(7);
                      }
                      else {
